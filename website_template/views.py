@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from website_template.models import Menu
+
 # Create your views here.
 
 def home(request):
@@ -10,7 +12,9 @@ def about(request):
     return render(request,'about.html')
 
 def menu(request):
-    return render(request,'menu.html')
+    food = Menu.objects.all
+    dic = {'text1':'Our Food Details ' , 'food_list': food , 'pr':'$'}
+    return render(request,'menu.html', dic)
 
 def reservation(request):
     return render(request,'reservation.html')

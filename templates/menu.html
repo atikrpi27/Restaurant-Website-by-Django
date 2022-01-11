@@ -303,6 +303,27 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 mt-5">
+                    <h2 class="text-center">{{ text1 }}</h2>
+                    <table border="1" width=100%>
+                        <tr class="text-center">
+                            <th>Food name:</th>
+                            <th>Food Catagories:</th>
+                            <th>Food price:</th>
+                        </tr>
+                        {% for row in food_list %}
+
+                        <tr class="text-center">
+                            <td>{{ row.Food_name }}</td>
+                            <td>{{ row.Food_Catagories }}</td>
+                            <td>{{ pr }}{{ row.Food_price }}</td>
+                        </tr>
+
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </section>
