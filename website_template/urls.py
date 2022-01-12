@@ -12,4 +12,5 @@ urlpatterns = [
     path('reservation/', views.reservation, name='reservation'),
     path('team/', views.team, name='team'),
     path('special_dishes/', views.special_dishes, name='special_dishes'),
+    path('base/', views.base, name='base'),
 ]

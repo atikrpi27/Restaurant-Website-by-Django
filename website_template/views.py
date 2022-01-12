@@ -24,3 +24,6 @@ def team(request):
 
 def special_dishes(request):
     return render(request,'special-dishes.html')
+
+def base(request):
+    return render(request,'base.html')
