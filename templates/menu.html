@@ -321,7 +321,8 @@
                                         <!-- Modal body -->
                                         <div class="modal-body">
                                             <div class="registration_form">
-                                                <form action="" method="post" class="row g-3">                                            
+                                                <form action="{% url 'menu' %}" method="POST" class="row g-3">
+                                                    {% csrf_token %}                                            
                                                     <div class="col-md-6">
                                                         <input type="text" name="Food_name" placeholder="Food Name">
                                                     </div>                  
