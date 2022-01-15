@@ -17,11 +17,11 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
@@ -32,8 +32,7 @@
     </head>
     <body data-spy="scroll" data-target="#navbar">
         <div id="side-nav" class="sidenav">
-            <a href="javascript:void(0)" id="side-nav-close">&times;</a>
-        
+            <a href="javascript:void(0)" id="side-nav-close">&times;</a>            
             <div class="sidenav-content">
                 <p>
                     Kuncen WB1, Wirobrajan 10010, DIY
@@ -48,7 +47,6 @@
             <a href="javascript:void(0)" id="side-search-close">&times;</a>
             <div class="sidenav-content">
                 <form action="">
-
                     <div class="input-group md-form form-sm form-2 pl-0">
                         <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
@@ -58,85 +56,75 @@
                         </div>
                     </div>
                 </form>
-            </div>                     
+            </div>     
         </div>	
+
         <div id="canvas-overlay"></div>
-        <div class="boxed-page">
-            <nav id="navbar-header" class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/">
-                        <img src="{% static 'img/logo.png' %}" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="lnr lnr-menu"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                        <ul class="navbar-nav d-flex justify-content-between">
-                            <li class="nav-item only-desktop">
-                                <a class="nav-link" id="side-nav-open" href="#">
-                                    <span class="lnr lnr-menu"></span>
-                                </a>
-                            </li>
-                            <div class="d-flex flex-lg-row flex-column">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'about' %}">About</a>
-                                </li>
-
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Special Dishes
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{% url 'special_dishes' %}">Beef Steak Sauce</a>
-                                        <a class="dropdown-item" href="{% url 'special_dishes' %}">Salmon Zucchini</a>
-                                    </div>
-                                </li>
-                            </div>
-                        </ul>
-                        
-                        <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="/">
+            <div class="boxed-page">
+                <nav id="navbar-header" class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/">
                             <img src="{% static 'img/logo.png' %}" alt="">
                         </a>
-                        <ul class="navbar-nav d-flex justify-content-between">
-                            <div class="d-flex flex-lg-row flex-column">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="lnr lnr-menu"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                            <ul class="navbar-nav d-flex justify-content-between">
+                                <li class="nav-item only-desktop">
+                                    <a class="nav-link" id="side-nav-open" href="#">
+                                        <span class="lnr lnr-menu"></span>
+                                    </a>
                                 </li>
+                                <div class="d-flex flex-lg-row flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Special Dishes
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{% url 'special_dishes' %}">Beef Steak Sauce</a>
+                                            <a class="dropdown-item" href="{% url 'special_dishes' %}">Salmon Zucchini</a>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                            
+                            <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="/">
+                                <img src="{% static 'img/logo.png' %}" alt="">
+                            </a>
+                            <ul class="navbar-nav d-flex justify-content-between">
+                                <div class="d-flex flex-lg-row flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'team' %}">Team</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="{% url 'reservation' %}">Reservation</a>
+                                    </li>
+                                </div>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'team' %}">Team</a>
+                                    <a id="side-search-open" class="nav-link" href="#">
+                                        <span class="lnr lnr-magnifier"></span>
+                                    </a>
                                 </li>
-
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="{% url 'reservation' %}">Reservation</a>
-                                </li>
-                            </div>
-                            <li class="nav-item">
-                                <a id="side-search-open" class="nav-link" href="#">
-                                    <span class="lnr lnr-magnifier"></span>
-                                </a>
-                            </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
+                </nav>
 
-        <!-- External JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-        <script src="{% static 'vendor/bootstrap/popper.min.js' %}"></script>
-        <script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
-        <script src="{% static 'vendor/select2/select2.min.js' %} "></script>
-        <script src="{% static 'vendor/owlcarousel/owl.carousel.min.js' %}"></script>
-        <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
-        <script src="{% static 'vendor/stellar/jquery.stellar.js' %}" type="text/javascript" charset="utf-8"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+                {% block body_block %}
 
-        <!-- Main JS -->
-        <script src="{% static 'js/app.min.js ' %}"></script>
+                {% endblock %}
     </body>
 </html>

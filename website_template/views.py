@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . forms import MenuForm
+from django.contrib import messages
 
 from website_template.models import Menu
 
@@ -12,12 +13,12 @@ def home(request):
 def about(request):
     return render(request,'about.html')
 
-def menu(request):     
+def menu(request):    
     if request.method == 'POST':
         form = MenuForm(request.POST or None)
         if form.is_valid():
             form.save()
-
+            messages.success(request,('Food is added Successfully!'))
     food = Menu.objects.all
     dic = {'text1':'Our Food Details ' , 'food_list': food , 'pr':'$'}
     return render(request,'menu.html', dic)
