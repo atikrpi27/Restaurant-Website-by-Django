@@ -1,7 +1,3 @@
-/*
- *	Resto by GetTemplates.co
- *	URL: https://gettemplates.co
- */
 html {
   overflow-x: hidden; }
 
@@ -218,7 +214,6 @@ a:hover {
     .menus .text-wrap h4 {
       font-weight: 300; }
 
-/*=====  End of MENU  ======*/
 /*=================================
 =            TESTIMONY            =
 =================================*/
@@ -278,7 +273,6 @@ a:hover {
     background-color: transparent;
     box-shadow: 0 0 0 2px white; }
 
-/*=====  End of TESTIMONY  ======*/
 /*===============================
 =            OVERLAY            =
 ===============================*/
@@ -300,7 +294,6 @@ a:hover {
   position: relative;
   z-index: 1; }
 
-/*=====  End of OVERLAY  ======*/
 /*============================
 =            TEAM            =
 ============================*/
@@ -328,7 +321,6 @@ a:hover {
   opacity: 0;
   transition: all .3s ease-in-out; }
 
-/*=====  End of TEAM  ======*/
 /*===================================
 =            RESERVATION            =
 ===================================*/
@@ -351,7 +343,6 @@ a:hover {
   color: #6d767e;
   font-weight: 400; }
 
-/*=====  End of RESERVATION  ======*/
 /*===============================
 =            SideNav            =
 ===============================*/
@@ -430,7 +421,6 @@ a:hover {
   opacity: .4;
   visibility: visible; }
 
-/*=====  End of SideNav  ======*/
 /*======================================
 =            Special Dishes            =
 ======================================*/
@@ -453,7 +443,6 @@ a:hover {
 .dishes-text {
   padding-left: 90px; }
 
-/*=====  End of Special Dishes  ======*/
 /*==================================
 =            RESPONSIVE            =
 ==================================*/
@@ -498,6 +487,5 @@ a:hover {
   .thumb-menu img {
     height: 90px; }
   .img-2 {
-    height: 500px; } }
-
-/*=====  End of RESPONSIVE  ======*/
+    height: 500px; } 
+  }
