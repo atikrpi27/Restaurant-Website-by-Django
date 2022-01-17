@@ -11,4 +11,4 @@ class Reg(models.Model):
     con_password = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.first_Name + ' ' + self.last_Name + ' ' + self.email
+        return self.first_Name + ' ' + self.last_Name + ' , ' + self.email + ' , ' + str(self.phone)
