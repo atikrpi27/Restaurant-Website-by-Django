@@ -6,4 +6,5 @@ apps_name='user'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/', views.registration, name='registration'),
+    path('login/', views.userlogin, name='login'),
 ]
