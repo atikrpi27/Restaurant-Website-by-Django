@@ -5,7 +5,8 @@ from django.http import HttpResponse
 from user.forms import RegForm
 from user.models import Registration
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
+from django.contrib import messages
 
 # Create your views here.
 def registration(request):
@@ -39,6 +40,13 @@ def userlogin(request):
             login(request,user)
             return redirect('home')
         else:
-            print('Invalid username or password')
+            messages.warning(request,'Invalid username or password')
 
     return render(request,'login.html')
+
+def userLogout(request):
+    logout(request)
+    return redirect('login')
+
+def profile(request):
+    return render(request,'profile.html')

@@ -1,0 +1,18 @@
+.nav-btn{
+    background-color: #00723d;
+}
+
+.nav-btn:hover{
+    color: #fff;
+    background: #005a30;
+}
+
+.nav-loginBtn{
+    background-color: #009eb3;
+}
+
+
+.nav-loginBtn:hover{
+    color: #fff;
+    background-color: #0a58ca;
+}
