@@ -11,9 +11,6 @@ from django.contrib import messages
 # Create your views here.
 def registration(request):
     if request.method == 'POST':
-        # form = RegForm(request.POST or None)
-        # if form.is_valid():
-            # form.save()
         fname = request.POST.get('first_name')
         lname = request.POST.get('last_name')
         username = request.POST.get('username')
@@ -22,20 +19,26 @@ def registration(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
 
-        user = User.objects.create_user(username=username, password=password)
-        user.set_password(password)
-        user.save()
-        reg = Registration(first_name=fname, last_name = lname, username=username, email = email, phone = phone, password= password, con_password = password)
-        reg.save()
-        return redirect('login')
+        if password == c_password:
+            # for create user in User table from reg html form
+            user = User.objects.create_user(username=username, password=password)
+            user.set_password(password)
+            user.save()
+
+            # for save Ragistration table
+            reg = Registration(first_name=fname, last_name = lname, username=username, email = email, phone = phone, password= password, con_password = password)
+            reg.save()
+            return redirect('login')
+        else:
+            messages.info(request,'Password and Confirm Password does not match.')
     return render(request,'reg.html')
 
 def userlogin(request):
     if request.method == 'POST':
-        name = request.POST['name']
+        username = request.POST['username']
         password = request.POST['password']
 
-        user = authenticate(request, username=name, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request,user)
             return redirect('home')
