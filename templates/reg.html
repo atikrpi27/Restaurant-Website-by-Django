@@ -19,13 +19,13 @@
 		<!-- Registeration Form -->
 		<div class="col-md-7 col-lg-6 ml-auto">
 			{% if messages %}
-					{% for message in messages %}
-					<div class="alert alert-warning alert-dismissible fade show" role="alert">
-						<strong>{{message}}</strong>
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-					</div>
-					{% endfor %}
-					{% endif %}
+			{% for message in messages %}
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong>{{message}}</strong>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+			{% endfor %}
+			{% endif %}
 			<form action="{% url 'registration' %}" method="POST" name="RegForm">
 				{% csrf_token %}
 				<div class="row">
@@ -105,7 +105,7 @@
 						<input id="con_password" type="password" name="con_password" placeholder="Confirm Password"
 							class="form-control bg-white border-left-0 border-md">
 					</div>
-					
+
 					<!-- Submit Button -->
 					<div class="form-group col-lg-12 mx-auto mb-0">
 						<button type="submit" name="submit" class="btn btn-success btn-block py-2">Create your

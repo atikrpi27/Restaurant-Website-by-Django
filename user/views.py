@@ -20,12 +20,13 @@ def registration(request):
         phone = request.POST.get('phone')
 
         if password == c_password:
+
             # for create user in User table from reg html form
-            user = User.objects.create_user(username=username, password=password)
+            userr = User.objects.create_user(username=username, password=password)
             user.set_password(password)
             user.save()
 
-            # for save Ragistration table
+            # for save Ragistration table from reg html form
             reg = Registration(first_name=fname, last_name = lname, username=username, email = email, phone = phone, password= password, con_password = password)
             reg.save()
             return redirect('login')
